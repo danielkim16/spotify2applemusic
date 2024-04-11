@@ -1,0 +1,28 @@
+spring:
+  config:
+    activate:
+      on-profile: local
+  datasource:
+    hikari:
+      jdbc-url: jdbc:mysql://192.168.0.5:3306/makestar?rewriteBatchedStatements=true
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      maximum-pool-size: 10
+      max-lifetime: 30000
+      connection-timeout: 3000
+      username: makestar
+      password: WEpsAx4TaV^Fg$
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  data:
+    redis:
+      host: 192.168.0.4
+      port: 6379
+
+apple-music:
+  url: https://api.music.apple.com
+  access-token: eyJhbGciOiJFUzI1NiIsImtpZCI6IjNHM0ZOV0ZIM1ciLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJRNDc0M1Y2M1NCIiwiZXhwIjoxNzEzOTQ1MTIwLCJpYXQiOjE3MTEzNTMxMjB9.WvHbIJpPF2L0-sLcIJSQg-TY4TPZM898EfUdaljavFEg3rf_ftAIUcqFcdZFH2ZtC3-OThfeHcqw-R9rxNIkcg
