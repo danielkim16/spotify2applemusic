@@ -34,4 +34,7 @@ public class Playlist extends BaseCreatedAtAndUpdatedAtEntity {
 
     @Column(nullable = false)
     private String title;
+
+    @Column(nullable = false)
+    private boolean synced;
 }

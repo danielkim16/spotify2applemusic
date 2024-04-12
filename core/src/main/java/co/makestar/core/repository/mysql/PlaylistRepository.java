@@ -19,7 +19,7 @@ public class PlaylistRepository {
 
     private final JPQLQueryFactory queryFactory;
 
-    public List<PlaylistDetails> findPlaylist(Platform platform, String platformPlaylistId, Long trackId, int pageSize) {
+    public List<PlaylistDetails> findPlaylist(Platform platform, Long playlistId, Long trackId, int pageSize) {
         return queryFactory.select(
                                constructor(
                                    PlaylistDetails.class,
@@ -38,7 +38,7 @@ public class PlaylistRepository {
                            .join(playlistTracks).on(playlist.id.eq(playlistTracks.playlistId))
                            .join(tracks).on(tracks.id.eq(playlistTracks.trackId))
                            .where(
-                               playlist.platformPlaylistId.eq(platformPlaylistId),
+                               playlist.id.eq(playlistId),
                                playlist.platform.eq(platform),
                                gtTrackId(trackId)
                            )

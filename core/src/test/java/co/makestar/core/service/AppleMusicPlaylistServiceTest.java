@@ -2,22 +2,19 @@ package co.makestar.core.service;
 
 import co.makestar.core.CoreConfiguration;
 import co.makestar.core.client.dto.AppleMusicSearchResponse;
-import java.util.Arrays;
-import java.util.List;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.TestPropertySource;
-import reactor.test.StepVerifier;
 
 @TestPropertySource(properties = "spring.config.name=application-core")
 @ActiveProfiles("local")
 @SpringBootTest(classes = CoreConfiguration.class)
-class AppleMusicServiceTest {
+class AppleMusicPlaylistServiceTest {
 
     @Autowired
-    AppleMusicService appleMusicService;
+    AppleMusicPlaylistService appleMusicService;
 
     @Test
     void search() {

@@ -4,6 +4,7 @@ CREATE TABLE `playlist`
     `platform`                  VARCHAR(50) NOT NULL,
     `platform_playlist_id`      VARCHAR(50) NOT NULL,
     `title`                     VARCHAR(255) NOT NULL COMMENT '제목',
+    `synced`                BOOLEAN NOT NULL DEFAULT 0 COMMENT '동기화 여부',
     `created_at`                TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '생성 일시',
     `updated_at`                TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '수정 일시',
     PRIMARY KEY (`id`),
